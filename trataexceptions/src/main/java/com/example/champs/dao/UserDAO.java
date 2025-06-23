@@ -1,6 +1,7 @@
 package com.example.champs.dao;
 
 import com.example.champs.exception.UserNotFoundException;
+import com.example.champs.exception.EmptyStorageException;
 import com.example.champs.model.UserModel;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +27,7 @@ public class UserDAO {
     }
 
     public UserModel findById (final Long id){
+        verifyStorage();
         String message = "User with id " + id + " not found";
 
         return models.stream()
@@ -41,7 +43,19 @@ public class UserDAO {
     }
 
     public List<UserModel> findAll(){
+        List<UserModel> result;
+        try{
+            verifyStorage();
+            result = models;
+        }catch(EmptyStorageException ex) {
+            ex.printStackTrace();
+            result = new ArrayList<>();
+        }
         return models;
+    }
+
+    private  void verifyStorage() {
+        if(models.isEmpty()) throw new EmptyStorageException("The storage is empty.");
     }
 }
 
