@@ -4,13 +4,19 @@
     // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
+        {
+            "type": "java",
+            "name": "exercicios",
+            "request": "launch",
+            "mainClass": "exercicios",
+            "projectName": "EstruturaControle_472a0050"
+        },
         {
             "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}",
-            "args": "pera melao uva limao maracuja abacaxi melancia caja caju",
+            "args": "pera melao uva limao maracuja abacaxi melancia caja caju"
         },
         {
             "type": "java",

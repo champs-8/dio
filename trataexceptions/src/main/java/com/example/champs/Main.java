@@ -5,6 +5,11 @@ import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 import com.example.champs.dao.UserDAO;
 import com.example.champs.model.UserModel;
+import com.example.champs.validator.UserValidator;
+import com.example.champs.exception.ValidatorException;
+import com.example.champs.exception.CustomException;
+import com.example.champs.exception.EmptyStorageException;
+import com.example.champs.exception.UserNotFoundException;
 
 public class Main {
     static Scanner sc = new Scanner(System.in);
@@ -32,15 +37,23 @@ public class Main {
             MenuOption selectOption = MenuOption.values()[inputOption - 1];
             switch (selectOption) {
                 case SAVE -> {
-                    var user = requestToSave();
-                    dao.save(user);
-                    System.out.println("Usuário cadastrado com sucesso!");
-                    break;
+                    try{
+                        var user = requestToSave();
+                        dao.save(user);
+                        System.out.println("Usuário cadastrado com sucesso!");
+                    }catch(CustomException ex){
+                        System.out.println(ex.getMessage());
+                        ex.printStackTrace();
+                    }
                 }
                 case FIND_BY_ID -> {
-                    var userId = requestId();
-                    dao.findById(userId);
-                    System.out.println("Usuário encontrado: " + dao.findById(userId));
+                    try{
+                        var userId = requestId();
+                        dao.findById(userId);
+                        System.out.println("Usuário encontrado: " + dao.findById(userId));   
+                    }catch (UserNotFoundException |EmptyStorageException ex){
+                        System.out.println(ex.getMessage());
+                    }
                 }
                 case FIND_ALL -> {
                     var users = dao.findAll();
@@ -48,16 +61,29 @@ public class Main {
                     users.forEach(System.out::println);
                 }
                 case UPDATE -> {
-                    var user = requestToUpdate();
-                    dao.update(user);
-                    System.out.println("Usuário atualizado com sucesso!");
-                    break;
+                    try{
+                        var user = requestToUpdate();
+                        dao.update(user);
+                        System.out.println("Usuário atualizado com sucesso!");
+                    }catch (UserNotFoundException |EmptyStorageException ex){
+                        System.out.println(ex.getMessage());
+                    }catch(CustomException ex){
+                        System.out.println(ex.getMessage());
+                        ex.printStackTrace();
+                    }finally{
+                        System.out.println("========================");
+                    }
                 }
                 case DELETE -> {
-                    var delete = requestId();
-                    dao.delete(delete);
-                    System.out.println("Usuário excluído com sucesso!");
-                    break;
+                    try{
+                        var delete = requestId();
+                        dao.delete(delete);
+                        System.out.println("Usuário excluído com sucesso!");
+                    }catch (UserNotFoundException |EmptyStorageException ex){
+                        System.out.println(ex.getMessage());
+                    }finally{
+                        System.out.println("========================");
+                    }
                 }
                 case EXIT -> {
                     System.out.println("Saindo do programa...");
@@ -88,8 +114,21 @@ public class Main {
 
         // Converte a string de data para OffsetDateTime
         LocalDate birthday = LocalDate.parse(birthdayStr, formatter);
+        
+        return validateInputs(0, name, email, birthday);
+    }
 
-        return new UserModel(0L, name, email, birthday);
+    public static UserModel validateInputs(final long id,
+            final String name,
+            final String email,
+            final LocalDate birthday){
+            var user =  new UserModel(0L, name, email, birthday);
+        try{
+            UserValidator.VerifyModel(user);
+            return user;
+        }catch(ValidatorException ex){
+            throw new CustomException("O seu modelo contém erros."+ex.getMessage(),ex);
+        }
     }
 
 
@@ -113,8 +152,8 @@ public class Main {
         .ofPattern("dd/MM/yyyy");
         // Converte a string de data para LocalDate
         LocalDate birthday = LocalDate.parse(birthdayStr, formatter);
-
-        return new UserModel(id, name, email, birthday);
+    
+        return validateInputs(id, name, email, birthday);
     }
 
     private static long requestId(){
