@@ -1,9 +1,9 @@
 public class Client {
     private String name;
-    private Long id;
+    private Long id = 0L;
 
     // Default constructor
-    public Client(String name, Long id) {
+    public Client(String name) {
         this.name = name;
         this.id = id++;
     }
