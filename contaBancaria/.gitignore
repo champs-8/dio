@@ -1,5 +1,11 @@
 /bin
-/lib
-.idea
 /out
+/.idea
+/.idea/workspace.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.vscode
+ContaBancaria.iml
 gitignore
+/lib

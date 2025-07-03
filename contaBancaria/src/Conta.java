@@ -35,6 +35,7 @@ public class Conta {
 
     public void setChequeEspecial(Double chequeEspecial) {
         this.chequeEspecial = chequeEspecial;
+        
     }
 
     public void setChequeEspecialAtivo(Boolean chequeEspecialAtivo) {
