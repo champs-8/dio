@@ -1,0 +1,5 @@
+com/champs/iphone/device/Iphone2007.class
+com/champs/iphone/interfaces/Aparelho.class
+com/champs/iphone/interfaces/Reprodutor.class
+com/champs/iphone/Main.class
+com/champs/iphone/interfaces/Navegador.class
