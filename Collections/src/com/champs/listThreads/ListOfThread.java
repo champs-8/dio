@@ -1,4 +1,4 @@
-package com.champs;
+package com.champs.listThreads;
 
 import java.util.ArrayList;
 import java.util.List;
