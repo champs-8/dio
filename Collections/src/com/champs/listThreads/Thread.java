@@ -1,4 +1,4 @@
-package com.champs;
+package com.champs.listThreads;
 
 public class Thread {
     private String description;
