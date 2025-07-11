@@ -31,12 +31,26 @@ public class BancoDigital
                 case 1:
                     System.out.println("Digite o valor do saldo: R$");
                     double valor = sc.nextDouble();
-                    new ContaCorrente().sacar(valor);
+                    cc.sacar(valor);
                     break;
                 case 2:
+                    System.out.println("Digite o valor do depósito: R$");
+                    double valorDeposito = sc.nextDouble();
+                    cc.depositar(valorDeposito);
+                    break;
 
+                case 3:
+                    System.out.println("Digite o valor da transferência: R$");
+                    double valorTransferencia = sc.nextDouble();
+                    cc.transferir(valorTransferencia, cp);
+                    break;
+                case 4:
+                    cc.imprimirExtrato();
+                    cp.imprimirExtrato();
+                    break;
             }
         }while (opcao != 0);
+        System.out.println("Obrigado por utilizar nosso banco digital!");
 
     sc.close();
     }
