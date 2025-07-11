@@ -17,6 +17,10 @@ public class Conta implements IConta{
 
     @Override
     public void sacar(double valor) {
+        if(valor > this.saldo) {
+            System.out.println("Saldo insuficiente para saque.");
+            return;
+        }
         this.saldo -= valor;
         System.out.printf("Seu saldo é de R$%.2f", this.saldo);
     }
@@ -30,6 +34,7 @@ public class Conta implements IConta{
     @Override
     public void depositar(double valor) {
         this.saldo += valor;
+        System.out.printf("Depósito realizado com sucesso! Seu saldo é de R$%.2f", this.saldo);
     }
 
     @Override
