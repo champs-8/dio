@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3a283cc1-9215-494b-956b-45a29a7a5ca5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/champs/controller/SudokuGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/champs/model/SudokuBoard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/champs/model/SudokuCell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/champs/service/SudokuGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/champs/service/SudokuValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/Bootcamp_Java_Santander.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/Bootcamp_Java_Santander.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bancoDigital/src/main/java/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bancoDigital/src/main/java/Conta.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOO5lHdM6eaEMO&quot;,
+        &quot;number&quot;: 2
+      },
+      &quot;lastSeen&quot;: 1752202720300
+    },
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOO5lHdM6bbhBu&quot;,
+        &quot;number&quot;: 1
+      },
+      &quot;lastSeen&quot;: 1752202738804
+    }
+  ]
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/champs-8/dio&quot;,
+    &quot;accountId&quot;: &quot;dc2800c7-3240-4582-89aa-549e6c4505a9&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/champs/Main.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2zi3lJFlRVMZn1uNiodAif2VJOQ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.Main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "study",
+    "onboarding.tips.debug.path": "/media/champs/PROGRAMACAO/DIO/Bootcamp_Java_Santander/sudoku/src/main/java/com/champs/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.sourceCode"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3a283cc1-9215-494b-956b-45a29a7a5ca5" name="Changes" comment="" />
+      <created>1752200217079</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1752200217079</updated>
+    </task>
+    <servers />
+  </component>
+</project>
