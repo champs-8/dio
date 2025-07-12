@@ -38,9 +38,7 @@ public class Conta implements IConta{
     }
 
     @Override
-    public void imprimirExtrato() {
-
-    }
+    public void imprimirExtrato() {}
 
     public void imprimirInfosComuns() {
         System.out.printf("Agencia: %d", this.agencia);
