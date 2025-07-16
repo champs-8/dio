@@ -1,14 +1,12 @@
-package champs.springboot;
+package data_jpa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PrimeirosPassosApplication {
+public class AulaSpringDataJpaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PrimeirosPassosApplication.class, args);
-
+		SpringApplication.run(AulaSpringDataJpaApplication.class, args);
 	}
-
 }
