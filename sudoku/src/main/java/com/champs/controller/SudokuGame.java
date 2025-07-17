@@ -42,10 +42,10 @@ public class SudokuGame {
     public void printBoard() {
         int[][] values = board.getBoardValues();
         for (int i = 0; i < 9; i++) {
-            if (i % 3 == 0 && i != 0) System.out.println("------+-------+------");
+            if (i % 3 == 0 && i != 0) System.out.println("---------+-----------+---------");
             for (int j = 0; j < 9; j++) {
-                if (j % 3 == 0 && j != 0) System.out.print("| ");
-                System.out.print(values[i][j] == 0 ? ". " : values[i][j] + " ");
+                if (j % 3 == 0 && j != 0) System.out.print("|  ");
+                System.out.print(values[i][j] == 0 ? ".  " : values[i][j] + "  ");
             }
             System.out.println();
         }
