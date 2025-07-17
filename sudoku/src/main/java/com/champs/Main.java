@@ -21,7 +21,7 @@ public class Main {
         SudokuGame game = new SudokuGame(board);
 
         // Game loop
-        System.out.println("=== Welcome to Sudoku! ===");
+        System.out.println("===== Welcome to Sudoku! =====");
 
 
         while(!game.isComplete()){
