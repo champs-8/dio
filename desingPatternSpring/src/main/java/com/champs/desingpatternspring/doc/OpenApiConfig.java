@@ -26,7 +26,7 @@ public class OpenApiConfig {
                                 .url("https://www.apache.org/licenses/LICENSE-2.0")))
                 .externalDocs(new ExternalDocumentation()
                         .description("Projeto no GitHub")
-                        .url("https://github.com/champs-8/dio/desingPatternSpring"));
+                        .url("https://github.com/champs-8/dio/tree/main/desingPatternSpring"));
         return openAPI;
     }
 }

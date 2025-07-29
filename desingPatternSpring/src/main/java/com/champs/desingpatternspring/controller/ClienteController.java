@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/clientes")
 public class ClienteController {
@@ -20,7 +22,7 @@ public class ClienteController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Cliente> findById(Long id) {
+    public ResponseEntity<Optional<Cliente>> findById(Long id) {
         return ResponseEntity.ok(clienteService.findById(id));
     }
 

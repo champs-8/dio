@@ -1,8 +1,7 @@
-package com.champs.desingpatternspring.respository;
+package com.champs.desingpatternspring.repository;
 
 import com.champs.desingpatternspring.model.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository

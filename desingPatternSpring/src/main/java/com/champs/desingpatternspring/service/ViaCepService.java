@@ -11,5 +11,5 @@ import org.springframework.web.bind.annotation.RequestMethod;
 // This interface is used to define the ViaCep service for fetching address information
 public interface ViaCepService {
     @GetMapping("/{cep}/json/")
-    Endereco consultaCep(@PathVariable("cep") String cep);
+    Endereco consultarCep(@PathVariable("cep") String cep);
 }
