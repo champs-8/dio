@@ -1,9 +1,6 @@
 package com.champs.restNuvem.domain.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -16,8 +13,12 @@ public class Card {
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private Long id;
+    @Column(unique = true, nullable = false)
     private String number;
+    @Column(nullable = false)
     private Integer ccv;
     private List<String> type;
+    @Column(name ="additional_limit", precision = 13, scale = 2)
+    // precision = total number of digits, scale = number of digits after the decimal point
     private BigDecimal limit;
 }

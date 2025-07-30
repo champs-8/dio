@@ -8,7 +8,7 @@ import java.util.List;
 @Entity
 @Data
 @Table(name = "tb_user")
-public class AppUser {
+public class User {
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private Long id;
