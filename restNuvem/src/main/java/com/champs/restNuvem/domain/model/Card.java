@@ -17,8 +17,9 @@ public class Card {
     private String number;
     @Column(nullable = false)
     private Integer ccv;
+    @ElementCollection(fetch = FetchType.EAGER)
     private List<String> type;
-    @Column(name ="additional_limit", precision = 13, scale = 2)
+    @Column(name ="additional_limit", scale = 2, precision = 13)
     // precision = total number of digits, scale = number of digits after the decimal point
     private BigDecimal limit;
 }
