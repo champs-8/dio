@@ -37,6 +37,12 @@ dependencies {
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.9'
 }
 
+tasks.jar{
+	manifest {
+		attributes["Main-class"] = "com.champs.restNuvem.RestNuvemApplication"
+	}
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
