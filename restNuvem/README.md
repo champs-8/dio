@@ -3,7 +3,7 @@
 ## Diagrama de Classes
 ```mermaid
 classDiagram
-    class AppUser {
+    class User {
         - Long id
         - String name
         - Account account
@@ -12,7 +12,7 @@ classDiagram
         - News[] news
     }
     
-    Class Account {
+    class Account {
         - Long id
         - String number
         - String agency
@@ -29,7 +29,7 @@ classDiagram
     class Card {
         - Long id
         - String number
-        - Interger ccv
+        - Integer ccv
         - String type
         - BigDecimal limit
     }
